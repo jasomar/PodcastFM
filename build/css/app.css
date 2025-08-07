@@ -322,7 +322,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -352,12 +354,34 @@ img {
   display: block;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0 0 2rem 0;
 }
 
 h1 {
   font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6;
+  display: inline-block;
+  margin-top: 5rem;
+  color: #313c4e;
+}
+@media (min-width: 768px) {
+  h2 {
+    margin-top: 0;
+  }
+}
+h2::after {
+  content: "";
+  background-color: #84d9bc;
+  height: 1rem;
+  width: calc(100% + 1rem);
+  display: block;
+  margin: -1.4rem 0 0 0;
 }
 
 h3 {
@@ -371,14 +395,89 @@ ul {
   list-style: none;
 }
 
+.seccion {
+  padding: 3rem 0;
+}
+@media (min-width: 768px) {
+  .seccion {
+    padding: 8rem 0;
+  }
+}
+
 .site-header {
   background-image: linear-gradient(rgba(57, 70, 89, 0.7) 0%, rgba(57, 70, 89, 0.7) 100%), url("../img/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   padding: 5rem 0;
 }
 .site-header .logo {
   max-width: 20rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .site-header .logo {
+    margin: 0;
+  }
+}
+.site-header .contenido-header {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  padding: 10rem 0;
+}
+@media (min-width: 1024px) {
+  .site-header .contenido-header {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    padding: 15rem 0;
+  }
+}
+.site-header .contenido-header h1 {
+  color: #FFFFFF;
+  font-size: 4.5rem;
+}
+@media (min-width: 768px) {
+  .site-header .contenido-header h1 {
+    font-size: 6rem;
+    max-width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .site-header .contenido-header h1 {
+    max-width: 40%;
+  }
+}
+
+.boton-primario {
+  background-color: #84d9bc;
+  font-size: 2rem;
+  padding: 1.2rem 4rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #313c4e;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+.boton-primario:hover {
+  cursor: pointer;
+  background-color: rgb(93.0372670807, 204.9627329193, 166.7763975155);
+}
+@media (min-width: 768px) {
+  .boton-primario {
+    width: auto;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .crea-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
 }
 /*# sourceMappingURL=app.css.map */
